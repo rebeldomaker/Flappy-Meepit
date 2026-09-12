@@ -2,12 +2,22 @@ using Godot;
 using System;
 
 public partial class Player : RigidBody2D
-
-/* {
+{	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
+		{
+			base._Ready();
+    	}
+	
+	// this is the function that will run every frame of the game (FPS)
+	public override void _Process(double delta) // public means other objects can see it, override means the parent (rigitbody2) already had made this function but we are adding new code to execute when this function is running, void just executes code but does not deliver any data back, paranthesis parameters is stuff it is supposed to take in when you call the function
 	{
+		base._Process(delta); // this tells it to just run the base version (version that rigitbody2d has) if you remove this then it fails to run all the code from rigitbody2d/parent function
+		if (Input.IsActionJustPressed("move_up")) 
 	}
+}
+
+/* {
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
