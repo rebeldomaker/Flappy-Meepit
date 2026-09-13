@@ -8,13 +8,17 @@
 [node name="Game" type="Node2D" unique_id=1432982470]
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=81245432]
+gravity_scale = 0.7
 script = ExtResource("1_xkndl")
+JumpPower = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1002837499]
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_nkgw6")
 
 [node name="Meepit" type="Sprite2D" parent="Player" unique_id=32744722]
+position = Vector2(-1, -1.9073486e-06)
+scale = Vector2(0.6, 0.5875)
 texture = ExtResource("2_u44n3")
 flip_h = true
 
