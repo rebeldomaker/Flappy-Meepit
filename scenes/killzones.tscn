@@ -11,10 +11,3 @@ script = ExtResource("1_djv3u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942689907]
 position = Vector2(144, -100)
 shape = SubResource("RectangleShape2D_nkgw6")
-
-[node name="Killzone Bottom" type="Area2D" parent="." unique_id=1651429599]
-script = ExtResource("1_djv3u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone Bottom" unique_id=1735521771]
-position = Vector2(144, 218)
-shape = SubResource("RectangleShape2D_nkgw6")
