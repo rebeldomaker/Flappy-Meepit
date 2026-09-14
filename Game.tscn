@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dj0vk2u56w5hi" path="res://scripts/csharp/Player.cs" id="1_xkndl"]
 [ext_resource type="Texture2D" uid="uid://ccg1m6aydlhfr" path="res://assets/Meepits/Meepit_faerie.webp" id="2_u44n3"]
 [ext_resource type="Script" uid="uid://w6arllnbodcn" path="res://scripts/csharp/KillZone.cs" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://170au8lns2f" path="res://pipe_scene.tscn" id="4_sb48q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nkgw6"]
 
@@ -15,7 +16,7 @@ size = Vector2(610, 21)
 mass = 0.6
 gravity_scale = 0.7
 script = ExtResource("1_xkndl")
-JumpPower = 320.0
+JumpPower = 310.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1002837499]
 shape = SubResource("CircleShape2D_nkgw6")
@@ -30,9 +31,20 @@ flip_h = true
 offset = Vector2(140, 60)
 zoom = Vector2(2, 2)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1433756568]
+[node name="Killzone Top" type="Area2D" parent="." unique_id=1433756568]
 script = ExtResource("3_u44n3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1202228499]
-position = Vector2(144, 222.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone Top" unique_id=1202228499]
+position = Vector2(144, -100)
 shape = SubResource("RectangleShape2D_nkgw6")
+
+[node name="Killzone Bottom" type="Area2D" parent="." unique_id=317694586]
+script = ExtResource("3_u44n3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone Bottom" unique_id=1951056167]
+position = Vector2(144, 218)
+shape = SubResource("RectangleShape2D_nkgw6")
+
+[node name="TopPipe" parent="." unique_id=1088438839 instance=ExtResource("4_sb48q")]
+texture_filter = 1
+position = Vector2(146, 42)

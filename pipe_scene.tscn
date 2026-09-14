@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://170au8lns2f"]
+
+[ext_resource type="Texture2D" uid="uid://ddt27p16m58ia" path="res://Gufiao_Studios_CuteFlappy_Free/Gufiao_CuteFlappy_Free/pipe.png" id="1_iloga"]
+
+[node name="Node2D" type="Node2D" unique_id=134157271]
+
+[node name="TopPipe" type="Sprite2D" parent="." unique_id=1088438839]
+position = Vector2(-4.5474735e-13, -109)
+rotation = -3.1415927
+scale = Vector2(0.3177143, 0.2485916)
+texture = ExtResource("1_iloga")
+
+[node name="BottomPipe" type="Sprite2D" parent="TopPipe" unique_id=1333553058]
+position = Vector2(3.1475453, -929.2349)
+rotation = 3.1415925
+scale = Vector2(1.0009929, 1.1075646)
+texture = ExtResource("1_iloga")
